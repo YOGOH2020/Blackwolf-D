@@ -1,0 +1,603 @@
+#loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: #0c1022;
+  animation: anim2 2s cubic-bezier(0.19, 1, 0.22, 1) 7s both;
+}
+
+#wrapperload {
+  width: 500px;
+  height: 100px;
+  overflow: hidden;
+}
+
+#wrapperload .elem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  /*background-color: rgb(54, 52, 52);*/
+}
+
+#wrapperload .elem h3 {
+  color: white;
+}
+
+#wrapperload .elem img {
+  width: 40%;
+}
+
+#wrapperload .elem:nth-child(1) {
+  animation: anim 2s cubic-bezier(0.19, 1, 0.22, 1) 1s both;
+}
+
+#wrapperload .elem:nth-child(2) {
+  animation: anim 2s cubic-bezier(0.19, 1, 0.22, 1) 3s both;
+}
+
+#wrapperload .elem:nth-child(3) {
+  animation: anim 2s cubic-bezier(0.19, 1, 0.22, 1) 5s both;
+}
+
+@keyframes anim {
+  to {
+    margin-top: -100px;
+  }
+}
+
+@keyframes anim2 {
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+/* Additional CSS for Bootstrap-based structure */
+body {
+  background: #0c1022;
+  color: white;
+}
+
+.header {
+  padding: 20px 0;
+  background: transparent;
+}
+
+.navbar-brand img {
+  width: 100px;
+  height: 30px;
+}
+
+.navbar-toggler-icon {
+  background-color: #0c1022;
+  color: #fff;
+}
+
+.custom-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='%23ffffff'%3e%3cpath stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  margin-left: 20px;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  background: linear-gradient(45deg, #f06, #3cf);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.home {
+  padding: 70px 0 0;
+}
+
+.home-sci a {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  color: white;
+  margin: 20px 10px;
+  background: transparent;
+}
+
+.home-content h1 {
+  font-size: 56px;
+}
+
+.home-content h3 {
+  font-size: 32px;
+}
+
+.home-content p {
+  font-size: 16px;
+  margin: 0 20px 40px;
+}
+
+.btn-primary {
+  width: 180px;
+  height: 48px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 19px;
+  background: linear-gradient(45deg, #f06, #3cf, #f06);
+  border: none;
+  color: white;
+  transition: background-position 0.5s ease;
+}
+
+.btn-primary:hover {
+  background-position: 100% 0;
+}
+
+.home-img {
+  width: 410px;
+  height: 410px;
+}
+
+.glowing-circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.glowing-circle::after {
+  content: "";
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  background: #0c1022;
+  border-radius: 50%;
+}
+
+.glowing-circle span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#f06, #3cf);
+  border-radius: 50%;
+}
+
+.glowing-circle span:nth-child(1) {
+  filter: blur(10px);
+}
+
+.glowing-circle .image {
+  position: relative;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.image img {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 350px;
+  object-fit: cover;
+}
+
+@keyframes slideTop {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive styles for tablets */
+@media (max-width: 768px) {
+  .navbar-nav .nav-link {
+    margin-left: 15px;
+    font-size: 16px;
+  }
+  
+  #wrapperload .elem h1{
+      font-size:24px;
+  }
+
+  .home-content h1 {
+    font-size: 40px;
+  }
+
+  .home-content h3 {
+    font-size: 24px;
+  }
+
+  .home-content p {
+    font-size: 14px;
+  }
+
+  .btn-primary {
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .home-sci a {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    margin: 10px;
+  }
+  
+    .home-img {
+    max-width: 300px; /* Adjust the max-width for screens up to 769px */
+  }
+
+  .glowing-circle::after {
+    width: 40%; /* Adjust the width for the glowing circle */
+    height: 40%; /* Adjust the height for the glowing circle */
+  }
+
+  .glowing-circle .image {
+    max-width: 300px; /* Adjust the max-width for screens up to 769px */
+  }
+
+  .image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the image horizontally and vertically */
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .about-me {
+    overflow: hidden;
+  }
+  
+  .about-me p{
+      font-size: 14px;
+  }
+  
+    .btn.btn-primary {
+    margin-bottom: 30px;
+  }
+
+}
+
+/* Responsive styles for mobile phones */
+@media (max-width: 480px) {
+  .navbar-nav .nav-link {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+
+  .home-content h1 {
+    font-size: 32px;
+  }
+
+  .home-content h3 {
+    font-size: 20px;
+  }
+
+  .home-content p {
+    font-size: 12px;
+  }
+
+  .btn-primary {
+    width: 120px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .home-sci a {
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+    margin: 8px;
+  }
+  
+}
+
+.content h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 18px;
+}
+
+.about-me {
+  max-width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url(./images/picture2.jpg); /* Replace 'your-image.jpg' with your image file's path */
+  background-size: cover; /* Adjust to cover the entire container */
+  background-position: center center; /* Center the background image */
+  max-height: 100vh; /* Set the height to the viewport height for a full-page background */
+  filter: blur(5px);
+  transition: filter 0.3s ease;
+}
+
+.about-me:hover {
+  filter: blur(0); /* Remove the blur effect on hover */
+}
+
+/* Style the content within the "About Me" section */
+.about-me-content {
+  background-color: rgba(
+    12,
+    16,
+    34,
+    0.8
+  ); /* Use rgba to set the background color with transparency */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  max-width: 80%;
+  transform: scale(0.8); /* Initial scale for animation */
+  opacity: 0; /* Initial opacity for animation */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* Add a class for image styling */
+.about-me-content img {
+  max-width: 100px; /* Adjust the image size as needed */
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+/* Style the heading and paragraph */
+h2 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.5;
+}
+
+/* Define animation when the section becomes visible */
+.about-me-content.animate {
+  transform: scale(1);
+  opacity: 1;
+}
+
+#team-area .team-row {
+  margin-bottom: 20px;
+}
+
+#team-area .section-title h2 {
+  text-transform: uppercase;
+}
+
+#team-area .section-title {
+  margin: 3% 0;
+}
+
+#team-area .section-title p {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#team-area .single-team {
+  padding-bottom: 70px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px #000;
+}
+
+#team-area .team-img {
+  position: relative;
+  z-index: 5;
+  overflow: hidden;
+}
+
+#team-area .team-img img {
+  width: 100%;
+  height: 300px;
+  transition: 0.3s;
+}
+
+#team-area .single-team:hover .team-img img {
+  transform: scale(1, 1);
+}
+
+#team-area .team-content {
+  height: 80px;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  overflow: hidden;
+  bottom: 0;
+  transition: all 0.4s;
+  background: linear-gradient(#f06, #3cf);
+  z-index: 5;
+}
+
+#team-area .single-team:hover .team-content {
+  height: 150px;
+}
+
+#team-area .team-info {
+  padding: 5px 20px 5px 20px;
+  transition: all 0.5s;
+}
+
+#team-area .single-team:hover .team-content {
+  background: #000;
+}
+
+#team-area .single-team .team-content .team-info h3 {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 16px;
+  margin: 5px;
+}
+
+#team-area .single-team:hover .team-info h3 {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+#team-area .team-info p {
+  margin-top: 15px;
+  color: #fff;
+}
+
+#team-area .single-team-text p {
+  margin-top: 5px;
+}
+
+#team-area .team-text {
+  color: #fff;
+  padding: 0 10px 5px;
+}
+
+.get-in-touch {
+  max-width: 800px;
+  margin: 50px auto;
+  position: relative;
+  box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.get-in-touch .title {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 3em;
+  line-height: 48px;
+  padding-bottom: 20px;
+  color: #5543ca;
+  background: linear-gradient(to Right, #f4524d 0%, #5543ca 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-form .form-field {
+  position: relative;
+  margin: 32px 0;
+}
+
+.contact-form .input-text {
+  display: block;
+  width: 100%;
+  height: 36px;
+  border-width: 0 0 2px 0;
+  border-color: #3cf;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.contact-form .input-text:focus + .label,
+.contact-form .input-text.not-empty + .label {
+  transform: translateY(-24px);
+}
+
+.contact-form .input-text:focus {
+  outline: none;
+}
+
+.contact-form .label {
+  position: absolute;
+  left: 20px;
+  bottom: 11px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #3cf;
+  cursor: text;
+  text-transform: capitalize;
+  transition: transform 0.2s ease-in-out;
+}
+
+.contact-form .submit-btn {
+  display: inline-block;
+  background-image: linear-gradient(125deg, #a72879, #064497);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
+  padding: 8px 16px;
+  border: none;
+  width: 200px;
+  cursor: pointer;
+}
+
+/* Style for the footer */
+footer {
+  background-color: #0c1022;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+/* Style for social icons */
+.social-icons a {
+  font-size: 24px;
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Add transitions for both transform and color */
+}
+
+/* Hover effect for social icons */
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #ff9900; /* Change the color on hover */
+}
+
+/* Easing animation for the hover effect */
+@keyframes easeUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Apply the easing animation to the social icons */
+.social-icons a:hover {
+  animation: easeUpDown 0.4s ease infinite;
+}
+
+/* Style for "All Rights Reserved" text */
+.rights {
+  font-size: 14px;
+  margin-top: 10px;
+}
